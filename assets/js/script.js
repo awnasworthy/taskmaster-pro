@@ -287,6 +287,12 @@ var auditTask = function(taskEl) {
   }
 };
 
+setInterval(function () {
+  $(".card .list-group-item").each(function(index, el) {
+    auditTask(el);
+  });
+}, 180000);
+
 // load tasks for the first time
 loadTasks();
 
